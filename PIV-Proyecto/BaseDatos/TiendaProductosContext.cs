@@ -28,6 +28,8 @@ namespace PIV_Proyecto.BaseDatos
         public DbSet<ClasificacionProducto> clasificacionProductos { get; set; }
         public DbSet<Producto> productos { get; set; }
         public DbSet<Cliente> clientes { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<PedidoDetalle> PedidoDetalles { get; set; }
 
 
     }

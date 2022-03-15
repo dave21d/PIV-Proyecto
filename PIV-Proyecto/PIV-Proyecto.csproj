@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BaseDatos\TiendaProductosContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="EntidadBases\EntidadBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,14 +153,30 @@
     <Compile Include="Migrations\202203142017549_AdicionTablaCliente.designer.cs">
       <DependentUpon>202203142017549_AdicionTablaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203150435472_AdicionarTablaPedido.cs" />
+    <Compile Include="Migrations\202203150435472_AdicionarTablaPedido.designer.cs">
+      <DependentUpon>202203150435472_AdicionarTablaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203150440092_ActualizarTablaPedidoForce.cs" />
+    <Compile Include="Migrations\202203150440092_ActualizarTablaPedidoForce.designer.cs">
+      <DependentUpon>202203150440092_ActualizarTablaPedidoForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203150459475_AdicionarTablaPedidoDetalle.cs" />
+    <Compile Include="Migrations\202203150459475_AdicionarTablaPedidoDetalle.designer.cs">
+      <DependentUpon>202203150459475_AdicionarTablaPedidoDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Clasificacion.cs" />
     <Compile Include="Models\ClasificacionProducto.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\PedidoDetalle.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Unidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\FormsClienteViewModel.cs" />
+    <Compile Include="ViewModel\FormsPedidoDetalleViewModel.cs" />
+    <Compile Include="ViewModel\FormsPedidoViewModel.cs" />
     <Compile Include="ViewModel\FormsProductoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +247,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203142017549_AdicionTablaCliente.resx">
       <DependentUpon>202203142017549_AdicionTablaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203150435472_AdicionarTablaPedido.resx">
+      <DependentUpon>202203150435472_AdicionarTablaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203150440092_ActualizarTablaPedidoForce.resx">
+      <DependentUpon>202203150440092_ActualizarTablaPedidoForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203150459475_AdicionarTablaPedidoDetalle.resx">
+      <DependentUpon>202203150459475_AdicionarTablaPedidoDetalle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

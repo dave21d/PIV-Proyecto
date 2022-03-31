@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PIV_Proyecto.Models.Unidad>
+@{
+    ViewBag.Title = "Unidad de Medida";
+}
+
+<h2> Clasificacion de Unidad</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Nuevo", null,new { @class="btn btn-info"})
+
+</p>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+
+
+    </tr>
+
+    @foreach (var model in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(M => model.UnidadMedidaId)</td>
+            <td>@Html.DisplayFor(M => model.Codigo)</td>
+            <td>@Html.DisplayFor(M => model.Descripcion)</td>
+            <td>@Html.DisplayFor(M => model.Estado)</td>
+           
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { Id = model.UnidadMedidaId }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Detalles", "Detalles", new { Id = model.UnidadMedidaId }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Eliminar", "Eliminar", new { Id = model.UnidadMedidaId }, new { @class = "btn btn-warning" })
+            </td>
+        </tr>
+    }
+</table>
+

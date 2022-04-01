@@ -50,6 +50,27 @@ namespace PIV_Proyecto.Controllers
             return View( unidadindb);
         }
 
+        public ActionResult Eliminar(int id)
+        {
+            var unidadindb = context.unidads.SingleOrDefault(u => u.UnidadMedidaId == id);
+            if (unidadindb == null)
+                return HttpNotFound();
+
+            return View(unidadindb);
+        }
+
+        [HttpPost, ActionName("Eliminar")]
+        public ActionResult CeEliminar(int id)
+        {
+            var unidadindb = context.unidads.SingleOrDefault(u => u.UnidadMedidaId == id);
+            if (unidadindb == null)
+                return HttpNotFound();
+
+            context.unidads.Remove(unidadindb);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public ActionResult Guardar(Unidad unidad)
         {

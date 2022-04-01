@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BaseDatos\TiendaProductosContext.cs" />
+    <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UnidadMedidaController.cs" />
     <Compile Include="EntidadBases\EntidadBase.cs" />
@@ -219,6 +220,10 @@
     <Content Include="Views\UnidadMedida\Index.cshtml" />
     <Content Include="Views\UnidadMedida\UnidadMedidaForms.cshtml" />
     <Content Include="Views\UnidadMedida\Detalles.cshtml" />
+    <Content Include="Views\Clasificacion\Index.cshtml" />
+    <Content Include="Views\Clasificacion\ClasificacionForms.cshtml" />
+    <Content Include="Views\Clasificacion\Detalles.cshtml" />
+    <Content Include="Views\Clasificacion\Eliminar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

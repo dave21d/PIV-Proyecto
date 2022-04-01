@@ -129,7 +129,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BaseDatos\TiendaProductosContext.cs" />
     <Compile Include="Controllers\ClasificacionController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\ClasificacionProductoController.cs" />
+=======
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\UnidadMedidaController.cs" />
@@ -222,7 +225,14 @@
     <Content Include="Views\UnidadMedida\Index.cshtml" />
     <Content Include="Views\UnidadMedida\UnidadMedidaForms.cshtml" />
     <Content Include="Views\UnidadMedida\Detalles.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Clasificacion\Index.cshtml" />
+    <Content Include="Views\Clasificacion\ClasificacionForms.cshtml" />
+    <Content Include="Views\Clasificacion\Detalles.cshtml" />
+    <Content Include="Views\Clasificacion\Eliminar.cshtml" />
+=======
     <Content Include="Views\UnidadMedida\Eliminar.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Clasificacion\Index.cshtml" />
     <Content Include="Views\Clasificacion\ClasificacionForms.cshtml" />
     <Content Include="Views\Clasificacion\Detalles.cshtml" />
@@ -236,6 +246,9 @@
     <Content Include="Views\Producto\Detalles.cshtml" />
     <Content Include="Views\Producto\Editar.cshtml" />
     <Content Include="Views\Producto\Eliminar.cshtml" />
+=======
+>>>>>>> d211a5d49a8af2fe911994ad2a4f73a5b93bd500
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 ﻿using System;
 using PIV_Proyecto.BaseDatos;
 using PIV_Proyecto.Models;
+=======
+﻿using PIV_Proyecto.BaseDatos;
+using System;
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+<<<<<<< HEAD
+=======
+using PIV_Proyecto.Models;
+
+
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
 
 namespace PIV_Proyecto.Controllers
 {
@@ -21,17 +32,27 @@ namespace PIV_Proyecto.Controllers
             base.Dispose(disposing);
             context.Dispose();
         }
+<<<<<<< HEAD
+=======
+        // GET: Clasificacion
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
         public ActionResult Index()
         {
             var clasi = context.clasificacion.ToList();
             return View(clasi);
+<<<<<<< HEAD
         }
 
+=======
+
+        }
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
         public ActionResult Nuevo()
         {
             var clasi = new Clasificacion();
             return View("ClasificacionForms", clasi);
         }
+<<<<<<< HEAD
 
         public ActionResult Editar(int id)
         {
@@ -72,6 +93,46 @@ namespace PIV_Proyecto.Controllers
             return RedirectToAction("Index");
         }
 
+=======
+        public ActionResult Editar(int id)
+        {
+            var Clasindb = context.clasificacion.SingleOrDefault(u => u.ClasificacionId == id);
+            if (Clasindb == null)
+                return HttpNotFound();
+
+            return View("ClasificacionForms", Clasindb);
+        }
+        public ActionResult Detalles(int id)
+        {
+            var Clasindb = context.clasificacion.SingleOrDefault(u => u.ClasificacionId == id);
+            if (Clasindb == null)
+                return HttpNotFound();
+
+            return View(Clasindb);
+        }
+        public ActionResult Eliminar(int id)
+        {
+            var Clasindb = context.clasificacion.SingleOrDefault(u => u.ClasificacionId == id);
+            if (Clasindb == null)
+                return HttpNotFound();
+
+            return View(Clasindb);
+        }
+        [HttpPost, ActionName("Eliminar")]
+        public ActionResult Eliminar1(int id)
+        {
+            var Clasindb = context.clasificacion.SingleOrDefault(u => u.ClasificacionId == id);
+            if (Clasindb == null)
+                return HttpNotFound();
+
+            context.clasificacion.Remove(Clasindb);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
         [HttpPost]
         public ActionResult Guardar(Clasificacion clasificacion)
         {
@@ -91,6 +152,15 @@ namespace PIV_Proyecto.Controllers
             }
             context.SaveChanges();
             return RedirectToAction("Index");
+<<<<<<< HEAD
         }
+=======
+        
+
+        
+        }
+
+
+>>>>>>> 4b3e4ed6f180eb062c75d9d73d5347f3e73cb0e3
     }
 }

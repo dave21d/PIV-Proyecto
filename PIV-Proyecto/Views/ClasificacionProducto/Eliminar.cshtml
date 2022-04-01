@@ -1,0 +1,37 @@
+﻿@model PIV_Proyecto.Models.ClasificacionProducto
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h2>Seguro que desea eliminar el registro?</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.ClasificacionProductoId)</dt>
+        <dd>@Html.DisplayFor(model => model.ClasificacionProductoId)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Codigo)</dt>
+        <dd>@Html.DisplayFor(model => model.Codigo)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Descripcion)</dt>
+        <dd>@Html.DisplayFor(model => model.Descripcion)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Estado)</dt>
+        <dd>@Html.DisplayFor(model => model.Estado)</dd>
+
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" />
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+
+
+</div>
+
